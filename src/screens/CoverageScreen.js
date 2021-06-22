@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 // styled components
 import styled from 'styled-components';
 // components
 import {
     CoverageFilter,
-    CoverageContainer,
+    // CoverageContainer,
     PapersSection,
     WaffleChart
 } from '../components';
@@ -389,7 +390,7 @@ const CoverageScreen = () => {
         console.log('Selected task in useEffect');
         console.log(selectedTasks);
         filter();
-    }, [selectedTasks, paperType, searchQuery]);
+    }, [filter, selectedTasks, paperType, searchQuery]);
 
     useEffect(() => {
         console.log('New filter Data:');

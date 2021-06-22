@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-pattern */
 import React, { useState, useEffect} from "react";
 // styled components
 import styled from 'styled-components';
@@ -29,12 +30,12 @@ var WaffleChart = ({data, encodingTypes}) => {
     useEffect(() => {
         var i = 0;
         for (var encoding of Object.entries(data.coverages)) {
-            for (var design of Object.keys(encoding[1])) {
+            for (var {} of Object.keys(encoding[1])) {
                 i++;
             }
         }
         setCount(i);
-    });
+    }, [data.coverages]);
 
     return (
         <StyledWaffleChart>
